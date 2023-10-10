@@ -8,7 +8,7 @@ eigenvalues2 = np.loadtxt("eigenvaluesn100.txt")
 eigenvectors2 = np.loadtxt("eigenvectorsn100.txt")
 
 #We define the function that plots the three first eigenvectors for the eigenvalues
-def plot_and_save_eigenvectors(x_values, eigenvectors, num_eigenvectors, n_value, filename_prefix):
+def plot_and_save_eigenvectors(x_values, eigenvectors, num_eigenvectors, n_value, filename):
     plt.figure()
     plt.title(f"Lowest {num_eigenvectors} Eigenvectors for $n={n_value}$")
     for i in range(num_eigenvectors):
@@ -18,7 +18,7 @@ def plot_and_save_eigenvectors(x_values, eigenvectors, num_eigenvectors, n_value
     plt.xlabel("Position ($\hat{x}_i$)")
     plt.ylabel("Eigenvector Element")
     plt.legend()
-    plt.savefig(f"{filename_prefix}_n{n_value}.jpg")
+    plt.savefig(f"{filename}_n{n_value}.jpg")
     plt.show()
 
 #we define the discretization parameters
